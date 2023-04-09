@@ -89,7 +89,7 @@ public class AbonnementService implements IAbonnementService{
             revenuMensuel += abonnement.getPrixAbon();
         }
 
-        System.out.println("Le revenu récurrent mensuel est de " + revenuMensuel);
+        System.out.println("Le revenu récurrent mensuel est:" + revenuMensuel);
     }
 
 

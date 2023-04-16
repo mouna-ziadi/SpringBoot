@@ -13,4 +13,6 @@ public interface MoniteurRepository extends JpaRepository<Moniteur, Integer> {
     //JpaRepository
     //CrudRepository
 
+    Moniteur findMoniteurByNumMoniteur(Long numMoniteur);
+
 }

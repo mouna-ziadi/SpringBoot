@@ -53,8 +53,8 @@ public class AbonnementService implements IAbonnementService{
        return ab;
     }
 
-    @Scheduled(cron = "*/15 * * * * *")
-    public void retrieveSubscriptions(){
+   // @Scheduled(cron = "*/15 * * * * *")
+    /*public void retrieveSubscriptions(){
         LocalDate dateFin = LocalDate.now().plusDays(7);
         List<Abonnement> list = abonnementRepository.findByDateFinBefore(dateFin);
         for (Abonnement ab : list) {
@@ -64,9 +64,9 @@ public class AbonnementService implements IAbonnementService{
             }
         }
 
-    }
-    @Scheduled(cron = "*/15 * * * * *")
-    public void retrieveSubscriptions1(){
+    }*/
+   // @Scheduled(cron = "*/15 * * * * *")
+    /*public void retrieveSubscriptions1(){
         LocalDate today = LocalDate.now();
         LocalDate dateExpera = today.plusDays(7);
 
@@ -77,10 +77,10 @@ public class AbonnementService implements IAbonnementService{
             }
         }
 
-    }
+    }*/
 
-    @Scheduled(cron = "*/15 * * * * *")
-    public void showMonthlyRecurringRevenue() {
+   // @Scheduled(cron = "*/15 * * * * *")
+   /* public void showMonthlyRecurringRevenue() {
         LocalDate now = LocalDate.now();
         List<Abonnement> abonnements = abonnementRepository.findByDateDebutBeforeAndDateFinAfter(now, now);
 
@@ -90,7 +90,7 @@ public class AbonnementService implements IAbonnementService{
         }
 
         System.out.println("Le revenu récurrent mensuel est:" + revenuMensuel);
-    }
+    }*/
 
 
 }

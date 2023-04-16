@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.stationdeski.Services.IMoniteurService;
 import tn.esprit.spring.stationdeski.Services.IPisteService;
+import tn.esprit.spring.stationdeski.entities.Couleur;
 import tn.esprit.spring.stationdeski.entities.Piste;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -37,5 +39,10 @@ public class PisteRestController {
     public Piste updateMoniteur(@RequestBody Piste m) {
         Piste piste= pisteService.updatePiste(m);
         return piste;
+    }
+
+    @GetMapping("/nombreSkieursParCouleurPiste")
+    public HashMap<Couleur,Integer> nombreSkieursParCouleurPiste(){
+        return pisteService.nombreSkieursParCouleurPiste();
     }
 }

@@ -7,6 +7,7 @@ package tn.esprit.spring.stationdeski.entities;
 
         import javax.persistence.*;
         import java.io.Serializable;
+        import java.time.LocalDate;
         import java.util.Date;
         import java.util.Set;
 
@@ -24,8 +25,8 @@ public class Skieur implements Serializable {
     private Long numSkieur;
     private String nomS;
     private String prenomS;
-    @Temporal(TemporalType.DATE)
-    private Date dateNaissance;
+
+    private LocalDate dateNaissance;
     private String ville;
 
     @ManyToMany(mappedBy = "skieurs")

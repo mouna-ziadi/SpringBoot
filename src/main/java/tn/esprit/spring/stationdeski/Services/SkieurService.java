@@ -9,7 +9,10 @@ import tn.esprit.spring.stationdeski.repositories.CoursRepository;
 import tn.esprit.spring.stationdeski.repositories.PisteRepository;
 import tn.esprit.spring.stationdeski.repositories.SkieurRepository;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -78,6 +81,10 @@ public class SkieurService implements ISkieurService {
         }
         return Lsk;
     }
+
+
+
+
 
 
 

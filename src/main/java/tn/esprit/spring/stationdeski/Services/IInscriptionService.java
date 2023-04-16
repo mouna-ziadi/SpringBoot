@@ -16,5 +16,7 @@ public interface IInscriptionService {
 
     void deleteInscription( Integer idInscription);
 
-   // Inscription assignInscriptionToCours(Long numInscription, Long numCours);
+    Inscription addInscriptionAndAssignToSkieurAndCours(Inscription inscri, Long numSkieur, Long numCours);
+
+    // Inscription assignInscriptionToCours(Long numInscription, Long numCours);
 }

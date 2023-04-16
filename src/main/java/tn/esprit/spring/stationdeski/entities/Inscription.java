@@ -27,5 +27,8 @@ public class Inscription implements Serializable {
     @ManyToOne
     private Cours cours;
 
+    public void setSkieur(Skieur skieur) {
+    }
+
     // Constructeur et accesseurs (getters) et mutateurs (setters)
 }

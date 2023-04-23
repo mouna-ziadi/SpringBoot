@@ -1,6 +1,7 @@
 package tn.esprit.spring.stationdeski.entities;
 
 
+        import com.fasterxml.jackson.annotation.JsonIgnore;
         import lombok.AllArgsConstructor;
         import lombok.Getter;
         import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class Inscription implements Serializable {
     private Long numInscription;
     private int numSemaine;
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
     private Skieur sikeur;
     @ManyToOne
     private Cours cours;

@@ -1,5 +1,6 @@
 package tn.esprit.spring.stationdeski.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table( name = "Piste")
+
 public class Piste implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -27,6 +29,7 @@ public class Piste implements Serializable {
     private Integer longeur;
     private Integer pente;
     @ManyToMany
+    @JsonIgnore
     private Set<Skieur> skieurs;
 
 
